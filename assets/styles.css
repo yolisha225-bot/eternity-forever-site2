@@ -112,6 +112,18 @@ nav.mainnav a:hover::after, nav.mainnav a.active::after{ transform:scaleX(1); }
 .hero .cta-btn.outline:hover{ background:rgba(255,255,255,.1); }
 @media (max-width:600px){ .hero{ min-height:440px; } .hero h1{ font-size:32px; } .hero-inner{ padding:70px 20px 56px; } }
 
+/* Visitor counter band (accueil uniquement) */
+.visitor-band{ background:var(--paper); border-bottom:1px solid var(--hair); padding:20px 24px; }
+.visitor-band .vb-inner{
+  max-width:var(--maxw); margin:0 auto; display:flex; align-items:center; justify-content:center;
+  gap:14px; text-align:center; flex-wrap:wrap;
+}
+.visitor-band .vb-icon{ color:var(--gold); flex-shrink:0; display:flex; }
+.visitor-band .vb-icon svg{ width:22px; height:22px; }
+.visitor-band .vb-count{ font-family:'Playfair',serif; font-weight:800; font-size:24px; color:var(--navy); }
+.visitor-band .vb-label{ font-size:13.5px; color:var(--muted); }
+@media (max-width:600px){ .visitor-band .vb-label{ font-size:12.5px; } }
+
 .page-hero{ background:var(--navy); color:#fff; padding:64px 24px 54px; }
 .page-hero .container{ max-width:var(--maxw); }
 .page-hero h1{ color:#fff; font-size:34px; margin-bottom:10px; }
