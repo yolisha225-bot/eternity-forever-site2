@@ -12,6 +12,12 @@
  */
 
 header('Content-Type: application/json; charset=utf-8');
+// Empêche tout cache (navigateur, ou CDN Hostinger devant le site) de servir
+// une réponse figée : sans cet en-tête, une visite peut être "avalée" par un
+// cache qui court-circuite l'exécution de ce script, sans jamais incrémenter
+// ni poser le cookie de dédoublonnage.
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+header('Pragma: no-cache');
 
 $dataFile = __DIR__ . '/visits.json';
 

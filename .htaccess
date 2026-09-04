@@ -1,0 +1,10 @@
+# ETERNITY FOREVER — redirection vers le domaine canonique.
+#
+# Sans cette règle, le site répond identiquement sur eternity-forever.com ET
+# www.eternity-forever.com : deux URLs différentes pour le même contenu, ce
+# qui nuit au référencement (contenu dupliqué) et fragmente le compteur de
+# visiteurs (un cookie posé sur un domaine n'est pas envoyé sur l'autre).
+# Le domaine canonique choisi pour ce site est la version sans "www".
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.eternity-forever\.com$ [NC]
+RewriteRule ^(.*)$ https://eternity-forever.com/$1 [L,R=301]

@@ -1,0 +1,4 @@
+# Donnée réelle vivant uniquement sur le serveur en ligne — ne jamais la
+# committer : un futur déploiement écraserait la valeur réelle déjà en
+# place sur l'hébergement.
+/visits.json

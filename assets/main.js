@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // ne peut donc pas être un texte statique du HTML ; il ne remplace aucun
 // contenu éditorial de la page.
 document.addEventListener('DOMContentLoaded', function () {
-  fetch('/counter.php', { credentials: 'same-origin' })
+  fetch('/counter.php?t=' + Date.now(), { credentials: 'same-origin', cache: 'no-store' })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (data) {
       if (!data || typeof data.count !== 'number') return;
