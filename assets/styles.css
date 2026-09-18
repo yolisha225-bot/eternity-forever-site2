@@ -195,6 +195,16 @@ table.info th{ text-align:left; background:var(--navy); color:#fff; padding:10px
 table.info td{ padding:11px 14px; border-bottom:1px solid var(--hair); vertical-align:top; }
 table.info td.k{ font-weight:700; color:var(--navy); width:34%; }
 
+/* Document officiel (capture + lien PDF) */
+.doc-showcase{ display:flex; gap:28px; align-items:flex-start; background:var(--paper); border:1px solid var(--hair); border-top:3px solid var(--navy); padding:28px; margin:28px 0; flex-wrap:wrap; }
+.doc-showcase .doc-thumb{ flex:0 0 200px; display:block; }
+.doc-showcase .doc-thumb img{ width:100%; border:1px solid var(--hair); }
+.doc-showcase .doc-info{ flex:1; min-width:240px; }
+.doc-showcase .doc-label{ font-size:11px; letter-spacing:1.6px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:8px; }
+.doc-showcase .doc-info h3{ font-size:17px; margin-bottom:10px; }
+.doc-showcase .doc-info p{ font-size:14px; color:var(--muted); margin:0 0 18px; }
+@media (max-width:600px){ .doc-showcase{ flex-direction:column; padding:22px; } .doc-showcase .doc-thumb{ flex:0 0 auto; max-width:220px; margin:0 auto; } }
+
 /* Org chart */
 .org{ display:flex; flex-direction:column; align-items:center; gap:0; margin:34px 0; }
 .org-box{ width:100%; max-width:560px; border:1.5px solid var(--navy); padding:16px 22px; text-align:center; background:var(--paper); }
